@@ -1,0 +1,13 @@
+---
+title: Haskell, Hakyll, Nix and Org-mode
+date: 2018-01-07 
+---
+
+#+BEGIN_SRC haskell :results output 
+import Data.List
+
+main :: IO ()
+main = print "Hello World!"
+#+END_SRC
+
+#+RESULTS:
