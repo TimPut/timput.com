@@ -1,0 +1,53 @@
+---
+title: Starting with meta.
+date: 2018-01-07 
+---
+
+        Writing on non-trivial subjects in a way which is of any use
+to realistic prospective readers is difficult. There is a tricky
+interplay between motivating the text with forward-looking glimpses of
+the goal, and supporting the text with backward-looking logical
+progression. There are difficult decisions of when to provide
+background, and when to credit the reader's existing knowledge. 
+
+Here I am going to collect my thoughts on how best to write for an
+audience. Historically (term papers excluded) my writing has primarily
+consisted of point form notes: sufficient information for me to
+recreate my own thoughts and arguments at a later date, but not enough
+for a reader to follow.
+
+The ordering of the presentation of information and of the rendering
+of arguments is particularly tricky. This is a common pattern I find
+when I come to a new belief: 
+- I'm considering a problem, something in need of explanation
+- I note down features of the problem and set to work exploring
+  possible explanations
+- I discover an explanation for more general phenomena which includes
+  the original phenomenon
+When I go to relay a new argument to someone else I have to choose
+between motivating the general phenomena, regurgitating the often
+messy actual route I took to the argument, and building the argument
+from the ground up, blind, with no motivation given.
+
+It is common in mathematics to take this blind leading approach. You
+are walked through various basic definitions and simple properties with
+a lengthy build-up before being shown how to put those definitions to
+use, and are then pleasantly surprised by the power of the simple
+tools you were given. This has problems even in mathematics. It is an
+extremely effective means to teach a mathematical theory. It is
+probably necessary in order to speed the student through generations
+of discoveries. Yet it doesn't teach much of anything about how to
+approach new problems in math.
+
+I'm tempted to suggest that what's needed is a small overview,
+something like a table of contents for an argument, so that the reader
+can see at a glance both where we're going and the general route we'll
+take to get there. This suggests something like the structuring of
+Wittgenstein's Tractatus, but that's famously unapproachable so maybe
+I'm completely off track here.
+
+I'll cut myself off here as my goal is very much not to blog about
+blogging, and even less so to blog about this blog (a sin far too
+common). To that end, any further thoughts on the subject will be
+spliced in above without notice, and will not become new independent
+posts.
