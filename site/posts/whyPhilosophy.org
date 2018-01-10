@@ -1,0 +1,19 @@
+---
+title: Why Philosophy?
+date: 2018-01-09 
+---
+Philosophy is wonderful as a catch-all field for problems which aren't well developed enough to have been claimed by other fields, for open problems that are so open that we don't know what we could possibly do to close them. This broad-net characteristic has side effects. A lot of utter nonsense, undeserving of defence, thrives in philosophy. While other problems--seemingly genuinely too difficult--linger for centuries with no clear progress.
+
+In general the process of solving an open problem is simple, so long as you abstract away enough of the detail that you don't have to solve anything:
+- Recognize that there is a problem to be solved.
+- Formulate the problem clearly and distinctly.
+- Determine what would constitute a solution to the problem
+  Is data alone enough? An explanatory story? A mathematical model?
+- Determine what steps would be required to solve--to generate the solution to--the problem.
+- Actually do the work and solve the problem.
+
+Before we had high resolution pictures of the surface of Pluto, mapping Pluto was an open problem. But it was a straight forward open problem: we knew it was a problem with an answer, we knew that Pluto existed, we knew that it had a surface to be mapped; we knew what sorts of steps would solve the problem, just get a camera in the vicinity.
+
+Problems in philosophy can fail on each of these counts. It can be unclear what effort would provide an answer It can be unclear if there is a definite answer to a problem It can be unclear exactly what the problem really is, or what the entities are that are involved. It can be unclear that there is a problem at all, or even anything to be explained.
+
+In the coming posts I will start to unravel a problem which exemplifies all these difficulties. I will outline my proposal to explain why it is that anything 'pays attention to' anything, a theory of interestingness.
