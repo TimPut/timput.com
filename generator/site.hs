@@ -10,7 +10,7 @@ main :: IO ()
 main = do
   E.setLocaleEncoding E.utf8
   hakyll $ do
-    match "images/*" $ do
+    match "img/*" $ do
         route   idRoute
         compile copyFileCompiler
 
