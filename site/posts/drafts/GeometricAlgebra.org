@@ -1,0 +1,29 @@
+Geometric Algebra is compositional. In the familiar algebras for geometry, operations often result in differently typed output values than the input value was. The algebraic structure of geometric algebra is that of a graded-algebra, this is basically an algebra on a sum type, indexed by an ordinal.
+
+Algebras are closed, that is, whenever we take an operation from our algebra, and plug in some elements from the carrier, what we get back, should be an element of the carrier. We can take the closure of an algebra by recursively defining the carrier of the algebra to be union of a base case carrier set and the results of applying the operations of the algebra. As it happens in the case of geometric algebra, our elements have additional structure which is nicely respected by the algebra: dimension. We can take a graded closure by instad of taking a a simple union, taking a sum.
+
+a -> f a
+
+conformal geometric f-algebra:
+signature for f:
+(five basis vectors)
+#+BEGIN_SRC haskell
+
+data GeometricF a = Basis (Vector a)
+                  | Add        (GeometricF a) (GeometricF a)
+                  | OuterP     (GeometricF a) (GeometricF a)
+                  | InnerP     (GeometricF a) (GeometricF a)
+                  | GeometricP (GeometricF a) (GeometricF a)
+
+instance Functor (GeometricF a) where
+  fmap f (Basis v) = v
+  fmap f (Add left right) = Add (f left) (f right)
+  fmap f (OuterP left right) = OuterP (f left) (f right)
+  fmap f (InnerP left right) = InnerP (f left) (f right)
+  fmap f (GeometricP left right) = GeometricP (f left) (f right)
+
+
+
+a + a^2 + a^3 + a^4 + a^5
+
+#+END_SRC
