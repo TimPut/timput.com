@@ -1,0 +1,10 @@
+
+Generating a character based favicon:
+#+BEGIN_SRC 
+printf "\u03F4" | convert -size 192x192 -font Hack-Regular -pointsize 128 \
+-gravity center -fill black -background none label:@- favicon.gif
+#+END_SRC
+Finding the proper name of your chosen font:
+#+BEGIN_SRC 
+fc-list | grep hack
+#+END_SRC
