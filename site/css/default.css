@@ -3,6 +3,7 @@ html {
   font-family: hack, monospace;
   color: #1a1a1a;
   background: #f8f8f8;
+  line-height: 1.5;
 }
 
 body {
