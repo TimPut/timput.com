@@ -1,0 +1,20 @@
+Deterministic information processing always reduces entropy. The actual manifestation of a computation of course increases total entropy, but the result however has less entropy.
+
+So the only way to produce anything new, the only way to be creative, is to tap into a source of entropy external to the computation; to add entropy as an input to the algorithm. We see this in biological evolution. Biological evolution is astoundingly creative, but natural selection, the information processing machanism of evolution, is purely uncreative. It winnows out the poor creations and retains the good results, but it does not itself produce any new forms. The creative element of evolution depends on the random noise of mutation. It is the interplay of the random generation of candidates, and nonrandom selection from that pool of candidates that gives creative powers of biological evolution. 
+
+* Less Random Generators are Better Random Generators
+In any interesting creative space, the ways of being poor quality vastly outnumber the ways of being good quality: there are many more ways of not being alive than there are of being alive; there are many more songs which aren't catchy than there are those that are catchy; there are many more programs that do not compile than ones that do; of the programs that do compile, there are many more that are not useful than ones that are useful; there are many more ways to be wrong than there are ways to be right.
+
+An unfortunate consequence of the nature of combinatorial growth is that, whatever the universe in question, the space of possible creations to explore grows much faster than the capability to explore that space. So if we want to find interesting points in that space, we should try to restrict our explorations to the most promising areas within the space. 
+
+Biological evolution requires three things
+1) Variation
+2) Heritability of that variation
+3) Differential reproduction of those variations
+
+
+Generalized evolution then requires
+1) Variation
+2) Differential growth of that variation
+
+Entities in nature have, at least partial, persistence. Things which exist tend to continue to exist. In the particular case of biological entities, because genes are discrete, even digital, genes can be exactly reproduced. Genes persist, potentially for billions of years. This persistance means that design space can be explored incrementally. When we produce a new candidate, it can be a small variation on previously existing ones, rather than a whole-cloth creation. When building a bridge, we get to use the wood the trees grew and transport the pieces into place by continuous motion; we do not need to try random configuration of atoms through vast numbers of combinations until we find something which can support a load across a span. When evolution builds a new organism, it gets to use the genetic materials lying about in the environment. A new bridge is a new arrangement of timber. A new genotype is a new variation on an existing genome.
