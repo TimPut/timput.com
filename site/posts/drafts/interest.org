@@ -1,0 +1,6 @@
+What we want to hear is whatever is most unexpected, but simultaneously most 'led-up-to' by the preceding music. We want to feel like we didn't know what was coming, but it fits.
+
+let P(i,t) be the predicted probability of observing a state i at a time t. let I(i,t) be the interestingness of a state i at a time t. 
+let del(i,t,j) be the change in probability of i at t when given j at t-1. Hypothesis: I(i,t)∝del(i,t,j) 
+Hypothesis 2: I(i,t) ∝ ∂P(i,t)/∂j 
+
