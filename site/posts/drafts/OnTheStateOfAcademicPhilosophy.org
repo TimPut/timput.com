@@ -1,0 +1,14 @@
+* Instrinsic vs extrinsic motivations for caring about philosophy
+* Tasks in philosophy
+* Bad reasons for doing philosophy:
+** Taxonomy
+ The classification of various philisophical positions and views into a hierarchy.
+** History
+ Related to taxonomy, the positioning of a viewpoint in a historical progression of ideas
+** Social pragmatics
+ The consideration of a view based on it's social impact, either the impact of the conclusions derived from the view, or in the case of social signaling the impact on the holder of the view of the announcment of said holding of views.
+* Good reasons for doing philosphy:
+** Understanding the world
+Here the ultimate aim must be something like "to form true beliefs"
+** Understanding where it is possible to go wrong:
+This is a valid application of taxonomy and history; by understanding where earlier thinkers made mistakes, we can perhaps avoid making those same mistakes in our own attempts to understand the structure of the world.
