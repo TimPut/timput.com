@@ -1,0 +1,6 @@
+---
+title: Univerals verus Necessities
+date: 2018-05-22
+---
+
+Something is necessary if it could not be any other way. Something is universal if we should (strongly) expect it to be the case, even without particular knowledge.
