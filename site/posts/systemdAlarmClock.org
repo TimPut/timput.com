@@ -1,5 +1,5 @@
 ---
-title: systemd Alarm Clock
+title: systemd Alarm Clock on NixOS
 date: 2018-06-03 
 ---
 
@@ -8,9 +8,16 @@ Include the following snippet in your configuration.nix:
   systemd.user.services = {
     dailyalarm = {
       description = "Daily Alarm";
-      path = [ pkgs.mpv pkgs.bash ]; #The service runs in it's own isolated environment, so we need to explicitly provide it with whatever the script will need, including a shell with which to run the script
-      wantedBy = [ "multi-user.target" ]; #This ensures that the service is enabled at the end of boot up
-      serviceConfig = { Type = "oneshot"; ExecStart = /home/tim/alarm.sh; }; #oneshot, roughly, means that systemd will do it's best to run the service, but if the time is missed, say because the computer was shutdown, it won't try at next boot until the time rolls around again.
+      path = [ pkgs.mpv pkgs.bash ]; #The service runs in it's own isolated environment, 
+                                     #so we need to explicitly provide it with whatever 
+                                     #the script will need, including a shell with which
+                                     #to run the script
+      wantedBy = [ "multi-user.target" ]; #This ensures that the service is enabled
+                                          #at the end of boot up
+      serviceConfig = { Type = "oneshot"; ExecStart = /home/tim/alarm.sh; }; 
+          #oneshot, roughly, means that systemd will do it's best to run the service, 
+          #but if the time is missed, say because the computer was shutdown, it 
+          #won't try at next boot until the time rolls around again.
       startAt = "*-*-* 6:30"; #Alarm runs every day at 6:30AM
       };
     };

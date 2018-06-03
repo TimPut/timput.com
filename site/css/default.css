@@ -56,7 +56,7 @@ article .header {
   text-decoration: none;
 }
 
-@media (max-width: 319px) {
+@media (max-width: 400px) {
   body {
     width: 90%;
     margin: 0;
@@ -85,7 +85,7 @@ article .header {
   }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 640px) {
   body {
     width: 90%;
     margin: 0;
@@ -114,9 +114,9 @@ article .header {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   body {
-    width: 60rem;
+    width: 80rem;
     margin: 0 auto;
     padding: 0;
   }
