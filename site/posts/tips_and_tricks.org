@@ -1,0 +1,49 @@
+---
+title: Tips and Tricks
+date: 2018-06-19 
+---
+#+STARTUP: latexpreview
+* fish shell:
+** ssh-agent
+ssh-agent is a great way to manage ssh keys, particularly with programs which do not, or only poorly, support interactive unlocking of your ssh keys. fish is a little different than bash, and the usual ssh-agent commands probably won't do what you want.
+In fish run:
+#+BEGIN_SRC 
+eval (ssh-agent -c)
+#+END_SRC
+to startup the ssh-agent daemon,
+and then add keys as normal:
+#+BEGIN_SRC 
+ssh-add ~/.ssh/$(YOUR_KEY)
+#+END_SRC
+* Simultaneous output, multiple soundcards in pulseaudio:
+#+BEGIN_SRC 
+pactl load-module module-combine-sink sink_name=combined
+#+END_SRC
+This creates an additional virtual soundcard with plays back on all available hardware sinks (outputs).
+
+* Inline \LaTeX in org-mode:
+Simply write your \LaTeX inline with your text.
+Then enable previewing by placing 
+#+BEGIN_SRC 
+#+STARTUP: latexpreview
+#+END_SRC
+somewhere near the top of your file. While on that line hit C-c C-c to render the document's \LaTeX, or C-c C-x C-l to render the expression at point
+Make sure to M-x custmize-variable org-format-latex-options, and set scale and colours appropriately.
+Ex: Stokes' Theorem:
+$\int_{\partial\Omega}\omega = \int_{\Omega}d\omega
+
+Now you can put \LaTeX in your org-drill captures...
+
+Here pandoc manages the conversion from org-mode source for the post to publishable html, and I'm leaning towards avoiding embedding to many images, so rather than nicely rendered \LaTeX, you'll see the closest unicode equivalents.
+
+** TODO Document rendering \LaTeX to PNG and embedding those in a hakyll based site.
+* Wine settings for games:
+
+** Age of Empires 2:
+To fix gameplay elements rendering as solid black:
+#+BEGIN_SRC 
+winetricks orm=backbuffer
+#+END_SRC
+
+** Getting Over it with Bennett Foddy
+ Install winestaging. Open winecfg, go the staging tab and enable CSMT
