@@ -28,5 +28,6 @@ in the repo root.  The build products will be in a symlinked folder named result
 # To publish:
 With my setup, publishing is as simple as rsyncing the result folder to my host, [[https://www.nearlyfreespeech.net][nearlyfreespeech.net]], over ssh.
 #+BEGIN_SRC bash
-nix-build; rsync -P -vr -e "ssh -i ~/.ssh/$(YOUR_NSF_KEY"" result/ $(YOUR_USERNAME)@ssh.phx.nearlyfreespeech.net:/home/public/
+nix-build; rsync -P -vr -e "ssh -i ~/.ssh/$(YOUR_NSF_KEY"" / 
+result/ $(YOUR_USERNAME)@ssh.phx.nearlyfreespeech.net:/home/public/
 #+END_SRC
