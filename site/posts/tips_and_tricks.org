@@ -30,7 +30,7 @@ Then enable previewing by placing
 somewhere near the top of your file. While on that line hit C-c C-c to render the document's \LaTeX, or C-c C-x C-l to render the expression at point
 Make sure to M-x custmize-variable org-format-latex-options, and set scale and colours appropriately.
 Ex: Stokes' Theorem:
-$\int_{\partial\Omega}\omega = \int_{\Omega}d\omega
+\int_{\partial\Omega}\omega = \int_{\Omega}d\omega
 
 Now you can put \LaTeX in your org-drill captures...
 
