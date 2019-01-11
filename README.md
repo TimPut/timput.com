@@ -15,5 +15,7 @@ Simply place a file with appropriate metadata in the first few lines in site/pos
        $ nix-build
 in the repo root.  The build products will be in a symlinked folder named result/
 
+n.b. this failed on me once when Pandoc was broken in the unstable Nix channel that I follow. To solve this, simply build against a different version of nixpkgs. There are multiple approaches to this. I simply build with $ nix-build -I nixpkgs=$(path to checked-out nixpkgs repo on stable branch)
+
 # To publish:
 With my setup, publishing is as simple as rsyncing the result folder to my host, [nearlyfreespeech.net](https://www.nearlyfreespeech.net), over ssh.
