@@ -1,0 +1,35 @@
+---
+title: Connecting to UAlberta's UWS on NixOS
+date: 2019-01-10
+---
+#+OPTIONS: ^:nil
+# the ^:nil disables sub/superscript text highlighting which unbreaks underscores
+
+The University of Alberta's campus wifi netowrk, UWS, uses
+WPA2-Enterprise with PEAP. The usual choices for managing wifi
+connections on NixOS, wicd and NetworkManager, both have poor to
+non-existent support for such a network out of the box. So to connect
+we need to configure wpa_supplicant manually. As root add the
+following to /etc/wpa_supplicant.conf (creating it if necessary):
+
+#+BEGIN_SRC sh :results output
+ctrl_interface=/run/wpa_supplicant
+ctrl_interface_group=wheel
+
+network={
+  ssid="UWS"
+  key_mgmt=WPA-EAP
+  eap=PEAP
+  identity="$(YOURID)"
+  password="$(YOURPASSWORD)"
+}
+#+END_SRC
+
+Then use one of the various wpa tools (wpa_gui is pretty user friendly) to connect.
+
+It is unfortunate to store credentials in plain text; see the
+discussion [[https://unix.stackexchange.com/questions/278946/hiding-passwords-in-wpa-supplicant-conf-with-wpa-eap-and-mschap-v2][here on StackExchange]] here for 
+instructions on storing the hash instead. In any case you should ensure no one 
+unauthorized is able to read your wpa_supplicant.conf, and to not use reuse wifi 
+passwords for more important secrets if you can avoid it.
+
