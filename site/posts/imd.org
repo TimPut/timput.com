@@ -1,3 +1,10 @@
+---
+title: Intermodulation Distortion and Music (in progress)
+date: 2020-03-24
+---
+#+OPTIONS: ^:nil
+# the ^:nil disables sub/superscript text highlighting which unbreaks underscores
+#+OPTIONS: tex:t
 * Pitch Space
 Let $X$ be the continuous space of pitchclasses given by logarithmic
 (base 2) frequencies mod 1. Then $X$ is a continuous space
@@ -37,14 +44,16 @@ linear combination of multiples of the original pure tone.
 
 But what about signals more complicated then a single pure tone? Let
 $B(t) = \sin (f_\beta) + \sin (f_\gamma)$. Then
-\begin{align}
+
+
 \begin{equation*}
+\begin{split}
 P(B(t)) &= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1
 (\sin (f_\beta) + \sin (f_\gamma))^2 \\
-&= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1 (\frac{1-\cos(2f_\beta)}{2} + 2\sin (f_\beta) \sin (f_\gamma) + \frac{1-\cos(2f_\gamma)}{2}) \\
-&= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1 (\frac{1-\cos(2f_\beta)}{2} + \cos(f_{\beta - \gamma}) - \cos(f_{\beta + \gamma}) + \frac{1-\cos(2f_\gamma)}{2}) \\
+&= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1 (\frac{1-\cos(f_{2\beta})}{2} + 2\sin (f_\beta) \sin (f_\gamma) + \frac{1-\cos(f_{2\gamma})}{2}) \\
+&= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1 (\frac{1-\cos(f_{2\beta})}{2} + \cos(f_{\beta - \gamma}) - \cos(f_{\beta + \gamma}) + \frac{1-\cos(f_{2\gamma})}{2}) \\
+\end{split}
 \end{equation*}
-\end{align}.
 
 So we can see that pushing two pure tones through this
 nonlinear system produces: the original tones, tones at double the
@@ -55,13 +64,13 @@ collection of harmonics (integer multiples of the input frequencies),
 and sums and differences of the input tones and their harmonics.
 
 For a component $\sin(f_{m\beta} \pm f_{n\gamma})$, where
-$\beta, \gamma$ are input frequencies, we $m+n$ the order of that
+$\beta, \gamma$ are input frequencies, we call $m+n$ the order of that
 component. The nonlinearity of most real world systems is mostly
 low-order. So for a first analysis, we'll restrict our attention to
 second-order effects; namely sums and differences of input
 frequencies, and doublings of input frequencies.
 * Chords
-Given an $n$-note chord, have $n^2$ second order intermodulation
+Given an $n$ note chord, we have $n^2$ second order intermodulation
 products. Of these, $n$ are simple doublings of the input frequencies.
 If we assume that octave equivalency has *some* musical validity, then
 we can set aside the simple doublings and focus instead on the
