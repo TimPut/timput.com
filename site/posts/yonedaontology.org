@@ -1,0 +1,21 @@
+---
+title: Yoneda, Realism and Antirealism.
+date: 2018-10-07
+---
+
+The empiricists are right; no direct access to the world as it is exists. All 
+information about the world is gleaned from interaction with it and its 
+inhabitants. This however, poses no problems. As the Yoneda lemma shows us, all 
+of an entity's properties are encapsulated by its interactions with other 
+entities. There is no way, not even in principle, to distinguish between two 
+objects, except by interacting with them. Hence if two objects interface with 
+the world identically, then they are indistinguishable, and in particular, there 
+is no means by which to show that they are not equal. Liebniz equality for real 
+physical objects.
+
+I would go further. Since the only way of gathering information about the world 
+is through interaction
+It is incoherent to suppose that one can refer to an "object" underlying a 
+collection of interactions, which exists as something more than the collection 
+of those interactions. Nothing beyond those interactions is even available for 
+reference.
