@@ -1,0 +1,52 @@
+---
+title: Honesty
+date: 2018-07-25
+---
+
+Why tell the truth? There are possible explanations based on repeated
+social interaction and social status, as well as explanations based on
+relatedness (if honesty benefits the receptive communicative partner,
+and that partner shares genes with the transmitting partner, then
+genes for honesty can benefit themselves in another body). However
+these accounts fail to explain honesty between unrelated, transient
+contacts. It might be suggested that honesty in towards unrelated,
+transient contacts is a mere 'mis-firing' of the evolved within-group
+or within family honesty, but I think this is an unsatisfactory
+answer. Humans already have behaviours which are specifically directed
+towards in-group and family members, and so must already have some
+apparatus to distinguish those groups. It would be strange if honesty
+simply failed to tie into those existing cognitive systems.
+Furthermore, these accounts provide only very poor explanations for
+inter-species honesty/honest-signals.
+
+Why communicate at all? Communication is an exchange of information.
+In this context it is best analyzed as unidirectional; any
+bidirectional communication can be construed as merely two
+simultaneous instances of unidirectional communication. So to
+communicate is to give information to another entity. Communication is
+only even potentially useful if the receptive partner's behaviour may
+be changed by the received information. Communicating with a rock does
+not meaningfully (at this level of analysis) change the world, and
+does not produce evolutionarily relevant effects. So, communication,
+if it is evolved, must have evolved to be directed towards agents, and
+in particular evolved to modify the behaviour of those agents; this
+is, in essence, Krebs & Dawkins '76.
+
+So (modulo some sloppiness regarding the difference between the
+organismal and the genetic levels of explanation) the point of
+communication is to cause other agents to act in ways which are
+beneficial to the communicator. This reduces our original question
+"Why be honest?" to "Why does honesty make others useful?", or "Why is
+honesty the best policy?". To answer this question we need to explore
+what we mean by 'honesty'. Temporarily neglecting considerations of
+intent, honest communication is true communication, which is
+communication which tends to produce true beliefs in its recipient.
+Where the evolutionarily relevant notion of truth is that a belief is
+true if it produces behaviours 'as-if' it were true. That is, if it
+produces behaviours which correspond with the behaviours that an
+idealized agent would perform under the same goals. Under this use, it
+is 'true' that jumping off a cliff will hurt, even if in fact it will
+kill you instantly; because pain is merely a tag classifying events as
+harmful, and in general dying is harmful from the point of view of
+evolving entities. (Aside: It is in this sense that useful fictions, like
+Newtonian mechanics are 'true'.)
