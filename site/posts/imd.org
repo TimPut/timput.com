@@ -1,0 +1,97 @@
+* Pitch Space
+Let $X$ be the continuous space of pitchclasses given by logarithmic
+(base 2) frequencies mod 1. Then $X$ is a continuous space
+representing picthclasses under octave equivalency. Furthermore, $X$
+is homotopy equivalent to the circle $S^1$. Take $\mathbb{R}$ regarded
+as the logarithmic space of pitches (frequencies). Then
+$f : \mathbb{R} \rightarrow X$ given by
+$f : r \mapsto r \text{ mod }1$ is a covering map. In particular
+$(C,f)$ gives a universal cover, in the sense that any other covering
+factors through $f$.
+
+The universal lifting property for coverings states that, given a
+covering, every path in the base space lifts to a unique path in the
+covering space.
+* Octave Equivalent Mappings
+We call a mapping out of the covering into some arbitrary space,
+$m : C \to B$, octave equivalent if there exists a map $e : X \to B$
+s.t. $m = e \circ f$.
+
+Note that not all mappings are octave equivalent. The purpose of this
+writing is to suggest that there are musically relevant mappings which
+fail to respect octave equivalency.
+* Intermodulation Distortion
+Let $A(t) = \sin (f_\beta (t))$ be an audio signal, where $f_\beta : t \mapsto 2\pi\beta t$. Real world systems
+are always to some degree non-linear. Suppose we can model this
+non-linearity as a linear and a quadratic term:
+$P(A(t)) = \alpha_0 A(t) + \alpha_1 A(t)^2$. We can then use the
+trigonometric identity $\sin (\theta) = \frac{1-\cos(2\theta)}{2}$ to
+rewrite the system as
+$P(A(t)) = \alpha_0 \sin(f_\beta) + \frac{1}{2}\alpha_1 (1-\cos (f_{2\beta}))$. If we neglect the phase shift introduced by the second
+term containing a cosine instead of a sine, and the DC offset
+introduced in that term, we can see that $P$ contains two components:
+the original signal and a signal at twice the frequency of the
+original. This is harmonic distortion. Nonlinear systems applied to
+single pure tones produce (ignoring phase shifts and DC offsets) a
+linear combination of multiples of the original pure tone.
+
+But what about signals more complicated then a single pure tone? Let
+$B(t) = \sin (f_\beta) + \sin (f_\gamma)$. Then
+\begin{align}
+\begin{equation*}
+P(B(t)) &= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1
+(\sin (f_\beta) + \sin (f_\gamma))^2 \\
+&= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1 (\frac{1-\cos(2f_\beta)}{2} + 2\sin (f_\beta) \sin (f_\gamma) + \frac{1-\cos(2f_\gamma)}{2}) \\
+&= \alpha_0 (\sin (f_\beta) + \sin (f_\gamma)) + \alpha_1 (\frac{1-\cos(2f_\beta)}{2} + \cos(f_{\beta - \gamma}) - \cos(f_{\beta + \gamma}) + \frac{1-\cos(2f_\gamma)}{2}) \\
+\end{equation*}
+\end{align}.
+
+So we can see that pushing two pure tones through this
+nonlinear system produces: the original tones, tones at double the
+original frequencies, and tones at the sum and difference of the two
+input frequencies. In general, upto phase differences, the result of
+running a collection of tones through a nonlinear system is a
+collection of harmonics (integer multiples of the input frequencies),
+and sums and differences of the input tones and their harmonics.
+
+For a component $\sin(f_{m\beta} \pm f_{n\gamma})$, where
+$\beta, \gamma$ are input frequencies, we $m+n$ the order of that
+component. The nonlinearity of most real world systems is mostly
+low-order. So for a first analysis, we'll restrict our attention to
+second-order effects; namely sums and differences of input
+frequencies, and doublings of input frequencies.
+* Chords
+Given an $n$-note chord, have $n^2$ second order intermodulation
+products. Of these, $n$ are simple doublings of the input frequencies.
+If we assume that octave equivalency has *some* musical validity, then
+we can set aside the simple doublings and focus instead on the
+$n^2-n = 2\binom{n}{2}$ (musically) nontrivial intermodulation
+products.
+
+I don't have a good unifying scheme for analyzing these products from
+a musical perspective, so for the moment I present here a table of
+illustrative computations.
+
+Each entry in the table lists the second order intermodulation
+products which result from combining the row note with the next note
+up of the column pitchclass. These distortion products are listed as a
+pitchclass name along with octave number, and a signed relative error;
+e.g. A4 intermodulated with A5 (the next A 'up') results in a
+slightly sharp E6, and an exact A4.
+
+
+|    | A                           | Bb                           | B                           | C                            | Db                           | D                           | Eb                           | E                           | F                            | Gb                          | G                           | Ab                          |
+|----+-----------------------------+------------------------------+-----------------------------+------------------------------+------------------------------+-----------------------------+------------------------------+-----------------------------+------------------------------+-----------------------------+-----------------------------+-----------------------------|
+| A  | E6 1.955e-2; A4 0.000e0     | Bb5 -4.928e-1; Ab0 1.377e-1  | Bb5 2.887e-2; A1 -3.551e-1  | B5 -4.351e-1; E2 1.765e-1    | B5 1.153e-1; Bb2 -3.263e-1   | C5 -3.201e-1; D3 5.852e-2   | C6 2.586e-1; Gb3 -2.586e-1   | Db6 -1.486e-1; A3 -5.872e-2 | Db6 4.580e-1; C3 -2.110e-1   | D6 7.837e-2; D4 3.689e-1    | Eb6 -2.878e-1; F4 -2.616e-1 | Eb6 3.593e-1; G4 -6.132e-2  |
+| Bb | E6 3.593e-1; Ab4 -6.132e-2  | F6 1.955e-2; Bb4 0.000e0     | B5 -4.928e-1; A0 1.377e-1   | B5 2.887e-2; Bb1 -3.551e-1   | C5 -4.351e-1; F2 1.765e-1    | C6 1.153e-1; B2 -3.263e-1   | Db6 -3.201e-1; Eb3 5.852e-2  | Db6 2.586e-1; G3 -2.586e-1  | D6 -1.486e-1; Bb3 -5.872e-2  | D6 4.580e-1; Db4 -2.110e-1  | Eb6 7.837e-2; Eb4 3.689e-1  | E6 -2.878e-1; Gb4 -2.616e-1 |
+| B  | F6 -2.878e-1; G4 -2.616e-1  | F6 3.593e-1; A4 -6.132e-2    | Gb6 1.955e-2; B4 -8.882e-16 | C5 -4.928e-1; Bb0 1.377e-1   | C6 2.887e-2; B1 -3.551e-1    | Db6 -4.351e-1; Gb2 1.765e-1 | Db6 1.153e-1; C2 -3.263e-1   | D6 -3.201e-1; E3 5.852e-2   | D6 2.586e-1; Ab3 -2.586e-1   | Eb6 -1.486e-1; B3 -5.872e-2 | Eb6 4.580e-1; D4 -2.110e-1  | E6 7.837e-2; E4 3.689e-1    |
+| C  | F6 7.837e-2; F4 3.689e-1    | Gb6 -2.878e-1; Ab4 -2.616e-1 | Gb6 3.593e-1; Bb4 -6.132e-2 | G6 1.955e-2; C5 4.441e-16    | Db6 -4.928e-1; B0 1.377e-1   | Db6 2.887e-2; C1 -3.551e-1  | D6 -4.351e-1; G2 1.765e-1    | D6 1.153e-1; Db3 -3.263e-1  | Eb6 -3.201e-1; F3 5.852e-2   | Eb6 2.586e-1; A3 -2.586e-1  | E6 -1.486e-1; C3 -5.872e-2  | E6 4.580e-1; Eb4 -2.110e-1  |
+| Db | F6 4.580e-1; E4 -2.110e-1   | Gb6 7.837e-2; Gb4 3.689e-1   | G6 -2.878e-1; A4 -2.616e-1  | G6 3.593e-1; B4 -6.132e-2    | Ab6 1.955e-2; Db5 8.882e-16  | D6 -4.928e-1; C1 1.377e-1   | D6 2.887e-2; Db2 -3.551e-1   | Eb6 -4.351e-1; Ab2 1.765e-1 | Eb6 1.153e-1; D3 -3.263e-1   | E6 -3.201e-1; Gb3 5.852e-2  | E6 2.586e-1; Bb3 -2.586e-1  | F6 -1.486e-1; Db4 -5.872e-2 |
+| D  | Gb6 -1.486e-1; D4 -5.872e-2 | Gb6 4.580e-1; F4 -2.110e-1   | G6 7.837e-2; G4 3.689e-1    | Ab6 -2.878e-1; Bb4 -2.616e-1 | Ab6 3.593e-1; C4 -6.132e-2   | A6 1.955e-2; D5 -8.882e-16  | Eb6 -4.928e-1; Db1 1.377e-1  | Eb6 2.887e-2; D2 -3.551e-1  | E6 -4.351e-1; A2 1.765e-1    | E6 1.153e-1; Eb3 -3.263e-1  | F6 -3.201e-1; G3 5.852e-2   | F6 2.586e-1; B3 -2.586e-1   |
+| Eb | Gb6 2.586e-1; C3 -2.586e-1  | G6 -1.486e-1; Eb4 -5.872e-2  | G6 4.580e-1; Gb4 -2.110e-1  | Ab6 7.837e-2; Ab4 3.689e-1   | A6 -2.878e-1; B4 -2.616e-1   | A6 3.593e-1; Db5 -6.132e-2  | Bb6 1.955e-2; Eb5 -8.882e-16 | E6 -4.928e-1; D1 1.377e-1   | E6 2.887e-2; Eb2 -3.551e-1   | F6 -4.351e-1; Bb2 1.765e-1  | F6 1.153e-1; E3 -3.263e-1   | Gb6 -3.201e-1; Ab3 5.852e-2 |
+| E  | G6 -3.201e-1; A3 5.852e-2   | G6 2.586e-1; Db4 -2.586e-1   | Ab6 -1.486e-1; E4 -5.872e-2 | Ab6 4.580e-1; G4 -2.110e-1   | A6 7.837e-2; A4 3.689e-1     | Bb6 -2.878e-1; C4 -2.616e-1 | Bb6 3.593e-1; D5 -6.132e-2   | B6 1.955e-2; E5 0.000e0     | F6 -4.928e-1; Eb1 1.377e-1   | F6 2.887e-2; E2 -3.551e-1   | Gb6 -4.351e-1; B2 1.765e-1  | Gb6 1.153e-1; F3 -3.263e-1  |
+| F  | G6 1.153e-1; Gb3 -3.263e-1  | Ab6 -3.201e-1; Bb3 5.852e-2  | Ab6 2.586e-1; D4 -2.586e-1  | A6 -1.486e-1; F4 -5.872e-2   | A6 4.580e-1; Ab4 -2.110e-1   | Bb6 7.837e-2; Bb4 3.689e-1  | B6 -2.878e-1; Db5 -2.616e-1  | B6 3.593e-1; Eb5 -6.132e-2  | C7 1.955e-2; F5 0.000e0      | Gb6 -4.928e-1; E1 1.377e-1  | Gb6 2.887e-2; F2 -3.551e-1  | G6 -4.351e-1; C3 1.765e-1   |
+| Gb | Ab6 -4.351e-1; Db3 1.765e-1 | Ab6 1.153e-1; G3 -3.263e-1   | A6 -3.201e-1; B3 5.852e-2   | A6 2.586e-1; Eb4 -2.586e-1   | Bb6 -1.486e-1; Gb4 -5.872e-2 | Bb6 4.580e-1; A4 -2.110e-1  | B6 7.837e-2; B4 3.689e-1     | C6 -2.878e-1; D5 -2.616e-1  | C7 3.593e-1; E5 -6.132e-2    | Db7 1.955e-2; Gb5 0.000e0   | G6 -4.928e-1; F1 1.377e-1   | G6 2.887e-2; Gb2 -3.551e-1  |
+| G  | Ab6 2.887e-2; G2 -3.551e-1  | A6 -4.351e-1; D3 1.765e-1    | A6 1.153e-1; Ab3 -3.263e-1  | Bb6 -3.201e-1; C4 5.852e-2   | Bb6 2.586e-1; E4 -2.586e-1   | B6 -1.486e-1; G4 -5.872e-2  | B6 4.580e-1; Bb4 -2.110e-1   | C7 7.837e-2; C5 3.689e-1    | Db7 -2.878e-1; Eb5 -2.616e-1 | Db7 3.593e-1; F5 -6.132e-2  | D7 1.955e-2; G5 0.000e0     | Ab6 -4.928e-1; Gb1 1.377e-1 |
+| Ab | A6 -4.928e-1; G1 1.377e-1   | A6 2.887e-2; Ab2 -3.551e-1   | Bb6 -4.351e-1; Eb3 1.765e-1 | Bb6 1.153e-1; A3 -3.263e-1   | B6 -3.201e-1; Db4 5.852e-2   | B6 2.586e-1; F4 -2.586e-1   | C6 -1.486e-1; Ab4 -5.872e-2  | C7 4.580e-1; B4 -2.110e-1   | Db7 7.837e-2; Db5 3.689e-1   | D7 -2.878e-1; E5 -2.616e-1  | D7 3.593e-1; Gb5 -6.132e-2  | Eb7 1.955e-2; Ab5 0.000e0   |
+
