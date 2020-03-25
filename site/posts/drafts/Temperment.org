@@ -1,0 +1,21 @@
+---
+title: TET
+date: 2018-08-09
+---
+
+
+Twelve-tone Equal Temperment (TET) was invented to allow musicians to
+play in arbitrary keys on a single instrument without retuning. In
+particular this allowed musicians to perform pieces which visited
+multiple different keys with only smaller temperment related tuning
+compromises. However, computers have no limitations of needing to
+retune, so there is no strong reason, other than traditions and
+accustomed ears, to stick with TET in computer composed and generated
+music. My (to be explained) hypothesis about the importance of IMD in
+music theory predicts that a minor seventh chord should be the most
+consonant tetrachord, but the minor seventh in question is not
+particularly close to the TET minor seventh interval. Why not compose
+on high level, the level of chord function, and translate down to
+notes and frequencies only at the last possible step with as much
+context as possible, then we can translate to more theoretically
+optimal frequencies and not to the persribed TET tones.
