@@ -6,7 +6,7 @@ date: 2018-10-07
 The empiricists are right; no direct access to the world as it is
 exists. All information about the world is gleaned from interaction
 with it and its inhabitants. This however, poses no problems. As the
-Yoneda lemma shows us, all of an entity's properties are encapsulated
+Yoneda lemma illustrates, all of an entity's properties are encapsulated
 by its interactions with other entities. There is no way, not even in
 principle, to distinguish between two objects, except by interacting
 with them. Hence if two objects interface with the world identically,
