@@ -1,19 +1,19 @@
 ---
-title: Rings in Categories
+title: Creativity
 date: 2018-02-06
 ---
 
 
 Deterministic information processing always reduces entropy. The
 actual manifestation of a computation of course increases total
-entropy, but the result of the computaion, however has less entropy
+entropy, the result of the computation however, has less entropy
 than the data input to the computation.
 
 So the only way to produce anything new, the only way to be creative,
 is to tap into a source of entropy external to the computation; to add
 entropy as an input to the algorithm. We see this in biological
 evolution. Biological evolution is astoundingly creative, but natural
-selection, the information processing machanism of evolution, is
+selection, the information processing mechanism of evolution, is
 purely uncreative. It winnows out the poor creations and retains the
 good results, but it does not itself produce any new forms. The
 creative element of evolution depends on the random noise of mutation.
@@ -42,7 +42,7 @@ Entities in nature have, at least partial, persistence. Things which
 exist tend to continue to exist. In the particular case of biological
 entities, because genes are discrete even digital, genes can be
 exactly reproduced; so genes persist, potentially for billions of years.
-This persistance means that design space can be explored
+This persistence means that design space can be explored
 incrementally. When we produce a new candidate, it can be a small
 variation on previously existing ones, rather than a whole-cloth
 creation. When building a bridge, we get to use the wood the trees
