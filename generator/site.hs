@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid         (mappend)
+import           Data.Monoid
 import qualified Data.Set            as S
 import qualified GHC.IO.Encoding     as E
 import           Hakyll
@@ -10,7 +10,15 @@ import           Text.Pandoc.Options
 main :: IO ()
 main = do
   E.setLocaleEncoding E.utf8
-  hakyll $ do
+
+  let myIgnoreFile ".htaccess" = False
+      myIgnoreFile path        = ignoreFile defaultConfiguration path
+      conf = defaultConfiguration { ignoreFile = myIgnoreFile }
+
+  hakyllWith conf $ do
+
+    static ".htacess"
+
     match "img/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -81,3 +89,11 @@ pandocMathCompiler =
                           writerHTMLMathMethod = MathJax ""
                         }
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
+
+static :: Pattern -> Rules ()
+static f = match f $ do
+    route   idRoute
+    compile copyFileCompiler
+
+directory :: (Pattern -> Rules a) -> String -> Rules a
+directory act f = act $ fromGlob $ f ++ "/**"
