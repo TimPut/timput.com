@@ -1,0 +1,142 @@
+---
+title: Designing a 12000:1 Reduction Belt Drive.
+date: 2020-04-27
+---
+
+I need an inexpensive, low backlash, compact, gear reduction which can
+be produced with imprecise 3D printed parts and can achieve very high
+ratios in a small space. As far as I know, this doesn't exist, so I'll
+design it myself. This is a difficult set of design constraints.
+
+The combination of low backlash and imprecise 3D printed parts rules
+of spur gears. Timing belts, however, are inexpensive, relatively
+precise, inherently low backlash, and the pulleys have geometry which
+lends itself well to 3D printing. So we'll start our design around
+widely available Gates GT2 belting.
+
+The design I'll eventually end up on can be adapted to pretty much
+whatever ratio you'd like, but in particular I settle on roughly
+12000:1. The usual way to achieve such high ratios is with a compound
+drive train: one reduction stage feeds another. With a two stage
+reduction, to achieve 12000:1, each stage needs to provide roughly
+110:1 reduction. Using 20 tooth minor pulleys (about the minimum
+practicable), this gives 2200 tooth major pulleys. These major pulleys
+then have a diameter of 1400mm! We would need to go to a four stage
+reduction to keep the pulley sizes reasonable. In that case we would
+have four stages of 20:209, where the 209 tooth pulley has a diameter
+of 133mm. We can do better by abandoning this sequential compound design.
+
+If we build a differential[fn:1] (a mechanical device which can output the
+difference of two inputs) then we can achieve very high reduction
+ratios by driving the two inputs to the differential at slightly
+different speeds.
+
+The housing required for an automotive style differential is poorly
+suited to 3D printing, and they require printed (bevel) spur gears,
+which we have already ruled out for similar reasons.
+
+We can however build an epicyclic differential[fn:2] to negate the
+need for a housing, and use belting in place of gearing. We will use
+20 tooth GT2 idlers as planets, since they are readily available for
+not much more than the cost of the ball bearings that go into them. We
+will use glued in place closed GT2 belts to add teeth to the sun and
+ring gears. In a planetary gear system, the ring gear needs to have a
+radius equal to the sum of the radius of the sun gear and the
+*diameter* of a planet. This means that the belt we use for the ring
+gear will need to have $2*20$ teeth more than the sun. With GT2 having
+a 2mm pitch, that means the ring gear belt will be 80mm longer than
+the sun gear belt. So we need to find off-the-shelf belt sizes which
+fit that constraint. Luckily 200mm and 280mm belts are readily
+available.
+
+We'll fix on those 200mm and 280mm belts, with 20 tooth idlers. We can
+start nailing down some dimensions:
+
+\[ Ring_{diam} = \frac{280mm}{\pi} - 1.01mm = 88.13mm \]
+
+\[ Sun_{diam} = \frac{200mm}{\pi} - 1.01mm = 62.67mm \]
+
+\[ PlanetCircle_{diam} = \frac{200mm}{\pi} + \frac{20t * 2\frac{mm}{t}}{\pi} = 76.39mm \]
+
+where $1.01mm$ is the distance from the back of GT2 belt to half the
+tooth height.
+
+Due the the particulars of the application, we'll use the ring and
+planet carriers as input and take our output from the sun. Note that
+the drive ratios of these two inputs differ. With a fixed ring gear
+the planet carrier drives the sun at a (+ 1 (/ 140 100.0)) = 2.4
+ratio. While with a fixed planet carrier, the ring drives the sun at a
+(* -1 (/ 140 100.0)) = -1.4 ratio (note the minus sign, this will be
+useful).
+
+Since the planet carrier drives the sun faster than the ring does, to
+null out for high resolution differential drive, the planet carrier
+needs to be driven by a slower pulley ratio than the ring does. The
+ring gear needs to be of some minimum size in order to accomodate the
+planets. While the planet carrier must extend beyond the ring gear in
+order to be geared down sufficiently.
+
+We'll set the target size for the driven surface of the ring gear by
+taking the diameter of inner surface (88.13mm) and adding an
+allowance, say 10mm radially, for structural reasons. This gives us (/
+(* (+ 20 88.13) pi) 2) ~= 170 teeth. I alreday have some 167 tooth
+rings from early experiments.
+
+In the end the goal is sub arc-second resolution when driven by a
+standard 1.8° stepper motor with no microstepping.
+
+We'll use a bit of haskell to choose suitable values for all the
+pulleys (ghci is great for small finite optimization problems).
+#+BEGIN_SRC haskell :results output
+import           Data.List (sortOn)
+
+arcSecondsPerStep step ringDrive ringPulley planetDrive planetPulley =
+  (1/step) * -- microstepping factor
+  ((2.4 * planetDrive/planetPulley) - (1.4 * ringDrive/ringPulley)) * -- differential ratio
+  (360 * 60 * 60) * -- Convert turns to arc-seconds
+  (1/200) -- 200 steps per turn standard stepper motor
+
+main = print $
+       take 10
+       . sortOn (\(a,_,_,_,e) -> abs e) -- sort by smallest planetPulley
+       . filter (\(a,_,_,_,_) -> abs a < 1 && abs a > 0.1) -- looking for sub arc-second
+       $ [ ( arcSecondsPerStep step ringDrive ringPulley planetDrive planetPulley
+           , ringDrive
+           , ringPulley
+           , planetDrive
+           , planetPulley
+           )
+         | ringDrive <- [50..100]
+         , ringPulley <- [167] -- Use the ring pulleys I already have
+         , planetDrive <- [50..100]
+         , planetPulley <- [50..250]
+         , ringPulley < planetPulley
+         , step <- [1]]
+#+END_SRC
+
+This produces:
+#+BEGIN_SRC haskell
+[(-0.5477985206056246,96.0,167.0,57.0,170.0),(0.8523069468000433,91.0,167.0,55.0,173.0),(-0.38588017335448477,87.0,167.
+0,55.0,181.0),(-0.3816629037012298,97.0,167.0,62.0,183.0),(0.9228677779576967,82.0,167.0,53.0,185.0),(-0.99069945215932
+26,99.0,167.0,65.0,188.0),(0.4850299401200431,82.0,167.0,55.0,192.0),(-0.4850299401200431,85.0,167.0,57.0,192.0),(0.960
+0592629176674,90.0,167.0,61.0,194.0),(0.3545396516613586,93.0,167.0,64.0,197.0)]
+#+END_SRC
+
+The first entry here seems fine. It will require a 167 tooth ring sprocket driven by a 96 tooth sprocket, and a 170 tooth planet carrier sprocket driven by a 57 tooth sprocket; and will produce a ~0.55 arc-second resolution.
+
+It can be useful to know the exact transmission ratio. We can compute that with another snippet of haskell.
+#+BEGIN_SRC haskell :results output
+import           Data.Ratio
+
+ratio ringDrive ringPulley planetDrive planetPulley = recip (((24 % 10) * (planetDrive % planetPulley)) - ((14 % 10) * (ringDrive % ringPulley)))
+
+main = print $ ratio 96 167 57 170
+#+END_SRC
+This produces: (-70975) % 6.
+70975:6 is a reduction of 11829.1667.
+
+Now all thats left is to build, test and program!
+
+
+[fn:1] [[https://en.wikipedia.org/wiki/Differential_(mechanical_device)]]
+[fn:2] https://en.wikipedia.org/wiki/Epicyclic_gearing
