@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="346.1538"
+   stroke-opacity="1"
+   viewBox="0.0 0.0 500.0 346.15384615384613"
+   font-size="1"
+   width="500.0000"
+   stroke="rgb(0,0,0)"
+   version="1.1"
+   id="svg3833"
+   sodipodi:docname="belts.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata3837">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     id="namedview3835"
+     showgrid="false"
+     inkscape:zoom="4.5254834"
+     inkscape:cx="282.47983"
+     inkscape:cy="103.49278"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3833" />
+  <defs
+     id="defs3795" />
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     id="g3799">
+    <path
+       d="M 173.0769,173.0769 l 269.2308,115.3846 "
+       id="path3797" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     id="g3803">
+    <path
+       d="M 173.0769,326.9231 h 269.2308 "
+       id="path3801" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-dashoffset="0.0"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     stroke-dasharray="4.160251471689218,4.160251471689218"
+     id="g3807">
+    <path
+       d="M 173.0769,288.4615 h 269.2308 "
+       id="path3805" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     id="g3811">
+    <path
+       d="M 442.3077,288.4615 v 38.4615 "
+       id="path3809" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-dashoffset="0.0"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     stroke-dasharray="4.160251471689218,4.160251471689218"
+     id="g3815">
+    <path
+       d="M 457.4584,253.1098 l -30.3015,70.7035 "
+       id="path3813" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     id="g3819">
+    <path
+       d="M 480.7692,288.4615 c 0.0000,-21.2417 -17.2198,-38.4615 -38.4615 -38.4615c -21.2417,-0.0000 -38.4615,17.2198 -38.4615 38.4615c -0.0000,21.2417 17.2198,38.4615 38.4615 38.4615c 21.2417,0.0000 38.4615,-17.2198 38.4615 -38.4615Z"
+       id="path3817" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     id="g3823">
+    <path
+       d="M 173.0769,173.0769 v 153.8462 "
+       id="path3821" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-dashoffset="0.0"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     stroke-dasharray="4.160251471689218,4.160251471689218"
+     id="g3827">
+    <path
+       d="M 233.6799,31.6700 l -121.2059,282.8139 "
+       id="path3825" />
+  </g>
+  <g
+     stroke-linejoin="miter"
+     stroke-opacity="1.0"
+     fill-opacity="0.0"
+     stroke="rgb(0,0,0)"
+     stroke-width="2.0"
+     fill="rgb(0,0,0)"
+     stroke-linecap="butt"
+     stroke-miterlimit="10.0"
+     id="g3831">
+    <path
+       d="M 326.9231,173.0769 c 0.0000,-84.9669 -68.8793,-153.8462 -153.8462 -153.8462c -84.9669,-0.0000 -153.8462,68.8793 -153.8462 153.8462c -0.0000,84.9669 68.8793,153.8462 153.8462 153.8462c 84.9669,0.0000 153.8462,-68.8793 153.8462 -153.8462Z"
+       id="path3829" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;"
+     x="160.66942"
+     y="219.67522"
+     id="text3841"><tspan
+       sodipodi:role="line"
+       id="tspan3839"
+       x="160.66942"
+       y="219.67522">β</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="200.42058"
+     y="133.57983"
+     id="text3845"><tspan
+       sodipodi:role="line"
+       id="tspan3843"
+       x="200.42058"
+       y="133.57983">D1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="452.32736"
+     y="281.18839"
+     id="text3849"><tspan
+       sodipodi:role="line"
+       id="tspan3847"
+       x="452.32736"
+       y="281.18839">D2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="290.57669"
+     y="323.61478"
+     id="text3853"><tspan
+       sodipodi:role="line"
+       id="tspan3851"
+       x="290.57669"
+       y="323.61478">S</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="327.47882"
+     y="235.66838"
+     id="text3857"><tspan
+       sodipodi:role="line"
+       id="tspan3855"
+       x="327.47882"
+       y="235.66838">CC</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="382.27963"
+     y="281.85129"
+     id="text3861"><tspan
+       sodipodi:role="line"
+       id="tspan3859"
+       x="382.27963"
+       y="281.85129">β</tspan></text>
+</svg>

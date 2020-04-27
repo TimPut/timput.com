@@ -1,0 +1,25 @@
+---
+title: Belt Length
+date: 2020-04-27
+---
+
+I recently needed to calculate the relationship between pulley diameter, center to center spacing and the length of a belt going around those pulleys. The references I looked at all gave an approximation for the case where the difference in diameter between the pulleys is small. So I decided to do the geometry myself. We assume circular pulleys, and that belts lie tangent to pulleys. WLOG assume $D1 > D2$, where $D1,D2$ are the diameters of the pulleys, $CC$ is the center to center spacing.
+
+#+CAPTION: Belt Arrangement
+[[../img/belts.svg]]
+
+\[ \beta = sin^{-1} \frac{D_1 - D_2}{2cc} \]
+\[ S = \sqrt{CC^2 - \left(\frac{D_1 - D_2}{2}\right)^2} \]
+\[ L = 2S + \pi\frac{D_1}{2} + \pi\frac{D_2}{2} + 2\beta\frac{D_1}{2} - 2\beta\frac{D_2}{2} \]
+
+That is: the total belt length is the sum of two the straight parts, the half circumferences of each pulley, and the two arcs of arclength $\beta$ on the larger pulley, minus the two arcs of arclength $\beta$ on the small pulley.
+
+#+BEGIN_SRC haskell
+-- Haskell snippet
+beltLength d1 d2 cc = 2 * s + 0.5 * pi * (d1 + d2) + beta * (d1 - d2)
+  where
+    beta = asin ((d1 - d2) / (2*cc))
+    s = sqrt(cc**2 - 0.5 * (d1 - d2))
+#+END_SRC
+
+In my particular application I need to know what center to center spacing will let me use a 610mm belt with pulley diameters of 40.74mm and 125.41mm. The small difference (small angle $\beta$) approximation gives a center to center spacing of 169.28mm, while the exact form gives 163.27mm. This difference is more than enough to make the exact formulation preferable.
