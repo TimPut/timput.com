@@ -135,6 +135,9 @@ main = print $ ratio 96 167 57 170
 This produces: (-70975) % 6.
 70975:6 is a reduction of 11829.1667.
 
+Using the belt length calculations from a previous
+[[https://timput.com/posts/beltLength.html][post]], we find that we need 170.43mm center to center spacing for the 96:167 system, and 184.34mm for the 57:170 system in order to use readily available 610mm belts.
+
 Now all thats left is to build, test and program!
 
 
