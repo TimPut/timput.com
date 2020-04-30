@@ -72,20 +72,20 @@ useful).
 Since the planet carrier drives the sun faster than the ring does, to
 null out for high resolution differential drive, the planet carrier
 needs to be driven by a slower pulley ratio than the ring does. The
-ring gear needs to be of some minimum size in order to accomodate the
+ring gear needs to be of some minimum size in order to accommodate the
 planets. While the planet carrier must extend beyond the ring gear in
 order to be geared down sufficiently.
 
 We'll set the target size for the driven surface of the ring gear by
 taking the diameter of inner surface (88.13mm) and adding an
 allowance, say 10mm radially, for structural reasons. This gives us (/
-(* (+ 20 88.13) pi) 2) ~= 170 teeth. I alreday have some 167 tooth
+(* (+ 20 88.13) pi) 2) ~= 170 teeth. I already have some 167 tooth
 rings from early experiments.
 
 In the end the goal is sub arc-second resolution when driven by a
 standard 1.8° stepper motor with no microstepping.
 
-We'll use a bit of haskell to choose suitable values for all the
+We'll use a bit of Haskell to choose suitable values for all the
 pulleys (ghci is great for small finite optimization problems).
 #+BEGIN_SRC haskell :results output
 import           Data.List (sortOn)
@@ -124,7 +124,7 @@ This produces:
 
 The first entry here seems fine. It will require a 167 tooth ring sprocket driven by a 96 tooth sprocket, and a 170 tooth planet carrier sprocket driven by a 57 tooth sprocket; and will produce a ~0.55 arc-second resolution.
 
-It can be useful to know the exact transmission ratio. We can compute that with another snippet of haskell.
+It can be useful to know the exact transmission ratio. We can compute that with another snippet of Haskell.
 #+BEGIN_SRC haskell :results output
 import           Data.Ratio
 
@@ -138,7 +138,7 @@ This produces: (-70975) % 6.
 Using the belt length calculations from a previous
 [[https://timput.com/posts/beltLength.html][post]], we find that we need 170.43mm center to center spacing for the 96:167 system, and 184.34mm for the 57:170 system in order to use readily available 610mm belts.
 
-Now all thats left is to build, test and program!
+Now all that's left is to build, test and program!
 
 
 [fn:1] [[https://en.wikipedia.org/wiki/Differential_(mechanical_device)]]
