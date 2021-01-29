@@ -1,0 +1,26 @@
+* Drive Posts
+I highly recommend using the brass tubing to reinforce the square
+drive posts, since the safety of you camera equipment rests on the
+strength of the threads in those posts.
+
+If you insist on using the unreinforced posts, then they should be
+printed on their sides with no supports. This is because intra-layer
+strength is much higher than inter-layer strength
+([CNC-Kitchen][https://youtu.be/mwS_2R2mIvo?t=351])
+
+* Pulleys as a basis for more pulleys
+GT2 pulley flanges are surprisingly easy to remove with a bottle
+opener. You can then use an aluminum pulley as the core of a custom pulley. I learned this trick from the Voron community
+(https://www.youtube.com/watch?v=ixUy2datDp4).
+
+* New ideas demonstrated here:
+1) Differential Epicyclic gearing with belts
+2) Using discrete optimization for choosing pulley sizes to drive a
+   differential drive from a single shaft without the need for an
+   idler tensioner
+3) Using bicycle headset gears for inexpensive slew bearings which can
+   be properly preloaded
+4) embedding threaded portions of brass rod to reinforce connections.
+5) Using timber framing joints to produce easy to print self aligning,
+   self tightening corner joints.
+

@@ -1,0 +1,23 @@
+---
+title: Rings in Categories
+date: 2020-02-06
+---
+#+OPTIONS: ^:nil
+# the ^:nil disables sub/superscript text highlighting which unbreaks underscores
+
+A category can be seen as a generalization of a monoid. 
+
+A monoid $(M,(- \cdot -))$ consists of a set $M$, a binary operation $(- \cdot -) : M \times M \to M$, and an identity element $e \in M$ such that $\forall m \in M : e \cdot m = m = m \cdot e$. 
+
+A category $C$ consists of a collection of morphisms $\text{Arr}(C)$ and objects $\text{Obj(C)}$, a partial binary operator on morphisms $(- \cdot -)$, and a collection of identity elements for $(- \cdot -)$. We associate to each morphism $m \in \text{Arr}(C)$ a source $s$ and a target $t$, and we write $m : s \to t$. 
+
+In general a category fails to be a monoid in that the binary operation is only defined when the source of the left argument and the target of the right argument coincide, and that we have a separate identity element for each object of $C$. When $Obj(C)$ is a singleton set, we recover the usual notion of monoid, since all sources and targets coincide.
+
+Similarly we can encode groups as one-object categories with the additional constraint that every morphism is an isomorphism. That is to say: $\forall m \in \text{Arr}(C) \exists m^{-1} : m \cdot m^{-1} = id = m^{-1} \cdot m$.
+
+A ring is a structure which contains both a monoid structure and a group structure, plus some laws relating the two structures. To encode a ring in a category we need to encode each of the aformentioned structures and the relations.
+
+
+#+BEGIN_SRC haskell
+import Control.Category
+#+END_SRC

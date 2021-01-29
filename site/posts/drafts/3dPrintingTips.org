@@ -1,0 +1,37 @@
+* Notes
+1) Round-overs on the underside of parts
+   They cause 90 degree overhangs which always fail, warp, or detach from the bed.
+2) Avoid sharp corners on XY if you can, since they require high accelerations.
+3) Threaded holes work well, but if possible put the load in shear, not axial.
+4) Leave space for captive nuts as an alternative.
+5) Design for everyone (see captive nuts note).
+6) Stiffness comes from moment, so keep wall thickness high enough to
+   avoid damage from impacts, and then maximize the moment rather than
+   upping infill if you need stiffness.
+7) Gears are hard to print, use belts where you can.
+8) Split mechanisms apart for modularity in design, to maximize
+   printability, and make best use of the anisotropy of 3d printed
+   artifacts.
+9) XY Compensation calibration is important for accurate holes.
+10) Print circles in XY whenever possible, they are difficult to
+    support and often need to be precise.
+11) Woodworking tradition is an excellent source of joinery ideas.
+12) Casting using direct molds
+13) Casting using offset molds and a intersitial mold material such as
+    silicone (wether molding silicone, or repurposed sealant), or
+    plaster.
+14) Hollow prints can be filled with castable materials such as
+    concrete if needed for additional stiffness or weight
+15) Teeth on toothed ilders, smooth sides on smooth idlers. Twist
+    belts if necessary.
+16) tapered holes make for easy insertion of brass threaded inserts
+    with relaxed tolerances.
+17) A blind bolt can reinforce thing sections against shear forces
+    (bolts are weak in shear, but still stronger than plastic prints).
+18) Filaments if very squishy. The faster you try to print (even with
+    sufficient heating capacity in the hotend), the more back pressure
+    you experience, and the more material squishes into the spaces
+    before the nozzle. Limit speeds for accuracy, and stick to a
+    single speed as much as possible (you can really only calibrate
+    for a single speed). Keep extrusion below 10mm^3/s for typical hotends.
+19) Single piece steam bent boxes

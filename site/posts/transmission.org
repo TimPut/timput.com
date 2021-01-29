@@ -1,6 +1,7 @@
 ---
 title: Designing a 12000:1 Reduction Belt Drive.
 date: 2020-04-27
+modified: 2020-04-28
 ---
 
 I need an inexpensive, low backlash, compact, gear reduction which can

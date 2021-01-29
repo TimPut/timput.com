@@ -1,0 +1,32 @@
+* Fuzzy sets.
+We would like operations on fuzzy sets to have better behave with
+regard to closure. Many operations take a fuzzy set to a point, or a
+level two fuzzy set to a level one fuzzy set. This is not composable.
+(Read: this is unusable garbage). If we could generalize finite order
+fuzzy sets to infinite order fuzzy sets, in a way that still allows
+the operations we like to be computed, then we might regain
+composition. In that case an operation which defuzzifies a set by one
+level would still leave the set at the same fuzziness level. This is
+in fact possible. Consider the representation of sets by their
+characteristic functions. The characteristic function of a set allows
+us to query elements for their degree of belonging in the set: either
+true, it is an element of the set, or false, it is not. Similarly we
+can represent (level-one) fuzzy sets by characteristic functions
+taking values in the unit interval. But then what does a (co-)limit
+fuzzification of these fuzzy sets look like, what's the type of an
+infinitely fuzzy set? Well a level two fuzzy set would be something
+that when queried with a potential member, returns a function awaiting
+a second query, which would then return a membership degree. A first
+try at the types of an implementation might look like this:
+#+begin_src haskell
+type Set a = Set {unSet :: a -> Bool}
+type FuzzySet a = FuzzySet {unFuzzySet :: a -> Double}
+type FuzzyFuzzy a = FuzzyFuzzySet {unFuzzyFuzzySet :: a -> a -> Double}
+#+end_src
+What then about infinitly fuzzy sets? They need to modeled by some
+type that can repeatedly accept an indefinite number queries, and can
+bottom out on a numeric membership degree when we're done *whenever
+we're done*. But we do know of such a type, the continuation monad!:
+#+begin_src haskell
+type InfFuzzySet = Cont Double
+#+end_src

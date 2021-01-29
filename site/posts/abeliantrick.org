@@ -1,0 +1,38 @@
+---
+title: Abelian Sharing
+date: 2021-01-27
+---
+
+You may be aware of this folkloric shared divisor [[http://stereopsis.com/2div.html][division trick]]. This
+trick generalizes to any Abelian group and is useful in any case where
+finding the inverse of a group element is significantly more expensive
+than the group operation. The reasoning is identical to the
+multiplication/division case, just generalized.
+
+\[ab^{-1} = ad(bd)^{-1}\]
+\[cd^{-1} = cb(bd)^{-1}\]
+
+We can transform the computation from a form requiring two
+multiplications and two inversions, to a form requiring five
+multiplications and one inversion.
+
+We can similarly generalize the trick for more for optimizing three or
+more such products: 
+
+\[ab^{-1} = adf(bdf)^{-1}\]
+\[cd^{-1} = cbf(bdf)^{-1}\]
+\[ef^{-1} = ebd(bdf)^{-1}\]
+
+This trades three multiplications and three inversions for eleven
+multiplications and one inversion. As we increase the number of
+products to compute, we can further optimize by sharing partial
+products. For example with four products:
+
+\[ab^{-1} = ad(fh)(bdfh)^{-1}\]
+\[cd^{-1} = cb(fh)(bdfh)^{-1}\]
+\[ef^{-1} = e(bd)h(bdfh)^{-1}\]
+\[gh^{-1} = g(bd)f(bdfh)^{-1}\]
+
+We can compute this with 15 multiplications and a single inversion,
+instead of the naive route with four multiplications and four
+inversions.
