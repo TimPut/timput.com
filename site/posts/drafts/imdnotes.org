@@ -1,0 +1,22 @@
+a = b/c * d
+
+a + d = b/c * d + d 
+      = (b/c + 1) * d 
+      = ((b+c)/c) * d
+
+2a + d = (2b)/c * d + d 
+      = ((2b)/c + 1) * d 
+      = ((2b+c)/c) * d
+ 
+na + d = (nb)/c * d + d
+      = ((nb)/c + 1) * d
+      = ((nb+c)/c) * d
+
+a + d / a = ((b+c)/c) / (b/c) = (b+c)/b
+(na + d) / a = ((nb+c)/c) / (b/c) = (nb+c) / b
+
+Example (P5):
+let a = 3/2 * d
+then (a + d) / a = (3+2) / 3 = 5 / 3
+    (2a + d) / a = (2*3+2) / 3 = 8 / 3
+

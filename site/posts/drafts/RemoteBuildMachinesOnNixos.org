@@ -1,0 +1,20 @@
+---
+title: Remote Build Machines on Nixos
+date: Thu Jun 27 14:10:05 MDT 2019
+---
+#+OPTIONS: ^:nil
+# the ^:nil disables sub/superscript text highlighting which unbreaks underscores
+
+I work primarily on a small ulta portable laptop. As such compilation
+times are a bottleneck, especially building the dependencies of
+Haskell projects.
+
+#+BEGIN_SRC haskell
+print $ 1 + 1
+#+END_SRC
+
+#+RESULTS:
+
+
+
+
