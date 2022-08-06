@@ -16,7 +16,7 @@ We can transform the computation from a form requiring two
 multiplications and two inversions, to a form requiring five
 multiplications and one inversion.
 
-We can similarly generalize the trick for more for optimizing three or
+We can similarly generalize the trick for optimizing three or
 more such products: 
 
 \[ab^{-1} = adf(bdf)^{-1}\]
