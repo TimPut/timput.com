@@ -2,27 +2,27 @@
 1) Round-overs on the underside of parts
    They cause 90 degree overhangs which always fail, warp, or detach from the bed.
 2) Avoid sharp corners on XY if you can, since they require high accelerations.
-3) Threaded holes work well, but if possible put the load in shear, not axial.
+3) Threaded holes work well, but if possible put the load in shear, not axial, for thread strength reasons.
 4) Leave space for captive nuts as an alternative.
-5) Design for everyone (see captive nuts note).
-6) Stiffness comes from moment, so keep wall thickness high enough to
-   avoid damage from impacts, and then maximize the moment rather than
-   upping infill if you need stiffness.
-7) Gears are hard to print, use belts where you can.
-8) Split mechanisms apart for modularity in design, to maximize
-   printability, and make best use of the anisotropy of 3d printed
-   artifacts.
+5) Design for everyone (see captive nuts note), the lowest common denominator of printing capability.
+6) Stiffness comes from moment, so keep wall thickness high enough to avoid
+   damage from impacts, and then maximize the moment rather than upping infill
+   if you need stiffness. This means a big but thin walled section is generally
+   better than a smaller solid section.
+7) Involute gears are hard to print, use belts or cycloidal gears where you can.
+8) Split mechanisms apart for modularity in design and prototyping, to maximize
+   printability, and make best use of the anisotropy of 3d printed artifacts.
 9) XY Compensation calibration is important for accurate holes.
 10) Print circles in XY whenever possible, they are difficult to
     support and often need to be precise.
 11) Woodworking tradition is an excellent source of joinery ideas.
 12) Casting using direct molds
-13) Casting using offset molds and a intersitial mold material such as
-    silicone (wether molding silicone, or repurposed sealant), or
+13) Casting using offset molds and an interstitial mold material such as
+    silicone (whether moulding silicone, or repurposed sealant), or
     plaster.
 14) Hollow prints can be filled with castable materials such as
     concrete if needed for additional stiffness or weight
-15) Teeth on toothed ilders, smooth sides on smooth idlers. Twist
+15) Teeth on toothed idlers, smooth sides on smooth idlers. Twist
     belts if necessary.
 16) tapered holes make for easy insertion of brass threaded inserts
     with relaxed tolerances.
