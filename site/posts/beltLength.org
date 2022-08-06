@@ -5,7 +5,6 @@ date: 2020-04-27
 
 I recently needed to calculate the relationship between pulley diameter, center to center spacing and the length of a belt going around those pulleys. The references I looked at all gave an approximation for the case where the difference in diameter between the pulleys is small. So I decided to do the geometry myself. We assume circular pulleys, and that belts lie tangent to pulleys. WLOG assume $D1 > D2$, where $D1,D2$ are the diameters of the pulleys, $CC$ is the center to center spacing.
 
-#+CAPTION: Belt Arrangement
 [[../img/belts.svg]]
 
 \[ \beta = sin^{-1} \frac{D_1 - D_2}{2cc} \]

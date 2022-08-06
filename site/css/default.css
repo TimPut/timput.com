@@ -18,6 +18,12 @@ nav {
   text-align: right;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
 nav a {
   font-size: 1.8rem;
   font-weight: bold;
